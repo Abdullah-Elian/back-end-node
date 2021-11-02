@@ -19,8 +19,8 @@ describe("Post Page API", () => {
 
         after((done) => {
 
-            Post.destroy({ where: {} });
-            User.destroy({ where: {} });
+            Post.destroy({ truncate : true,where: {} });
+            User.destroy({ truncate : true,where: {} });
 
             
             sequelize.query("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='users'");

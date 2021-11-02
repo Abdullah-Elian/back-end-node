@@ -16,7 +16,7 @@ describe("User API", () => {
 
         after((done) => {
 
-            User.destroy({ where: {} });
+            User.destroy({ truncate : true, where: {} });
             sequelize.query("UPDATE SQLITE_SEQUENCE SET SEQ=0 WHERE NAME='users'");
 
 

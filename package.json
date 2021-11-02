@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "nyc --reporter=text mocha",
+    "test": "env DB_HOST=./dev.sqlite DB_DILECT=sqlite nyc --reporter=text mocha ",
     "start": "nodemon app.js",
     "start-server": "node app.js"
   },

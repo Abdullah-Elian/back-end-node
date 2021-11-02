@@ -19,7 +19,7 @@ describe("comment Page API", () => {
     //post get all post api
     after((done) => {
 
-        Post.destroy({ where: {} });
+        Post.destroy({ where: {}});
         User.destroy({ where: {} });
         Comment.destroy({ where: {} });
 
@@ -37,12 +37,12 @@ describe("comment Page API", () => {
     describe("GET /comment", () => {
 
 
-        before((done) => {
+        before( (done) => {
             User.create({
                 name: "test",
                 email: "a@a.com",
                 username: "tesssssssssst"
-            }).then(() => {
+            })
 
                 Post.create({
                     title: "test",
@@ -50,21 +50,24 @@ describe("comment Page API", () => {
                     userId: 1
                 })
 
-            })
+        
+            console.log("beeeeeeeeeeeeeeeeeefor");
             done();
 
         })
-        beforeEach((done) => {
+        beforeEach( (done) => {
 
 
 
-            Comment.create({
+             Comment.create({
                 name: "test",
                 email: "a@a.com",
                 body: "tet",
                 postId: 1
 
             })
+            console.log("beeeeeeeeeeeeeeeeeefor each");
+
             done();
 
         })

@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(bodyParser.json())
 
+require('dotenv').config()
 
 app.use(postRoutes);
 app.use(userRoutes);
